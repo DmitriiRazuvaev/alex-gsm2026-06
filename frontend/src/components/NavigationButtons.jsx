@@ -36,7 +36,10 @@ const NavigationButtons = () => {
         return (
           <button
             key={item.path}
-            onClick={() => navigate(item.path)}
+            onClick={() => {
+              playClickSound();
+              navigate(item.path);
+            }}
             className={`group relative bg-gradient-to-r from-slate-800/90 to-slate-900/90 backdrop-blur-md border border-pink-500/30 rounded-l-2xl px-6 py-4 transition-all duration-500 hover:border-pink-400 hover:shadow-xl hover:shadow-pink-500/20 ${
               isVisible 
                 ? 'translate-x-[calc(100%-3.5rem)] opacity-100' 
