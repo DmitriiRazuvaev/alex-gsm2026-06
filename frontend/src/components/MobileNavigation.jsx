@@ -30,7 +30,10 @@ const MobileNavigation = () => {
           return (
             <button
               key={item.path}
-              onClick={() => navigate(item.path)}
+              onClick={() => {
+                playClickSound();
+                navigate(item.path);
+              }}
               className={`flex flex-col items-center justify-center py-2 px-1 rounded-lg transition-all duration-300 ${
                 isActive 
                   ? 'bg-pink-600/20 text-pink-400' 
