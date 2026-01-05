@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Home, User, GraduationCap, Briefcase, Award, Mail, TrendingUp } from 'lucide-react';
+import useClickSound from '../hooks/useClickSound';
 
 const NavigationButtons = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { t } = useLanguage();
   const [isVisible, setIsVisible] = useState(false);
+  const playClickSound = useClickSound();
 
   useEffect(() => {
     const timer = setTimeout(() => {
