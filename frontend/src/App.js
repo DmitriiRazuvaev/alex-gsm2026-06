@@ -17,6 +17,7 @@ function App() {
   return (
     <LanguageProvider>
       <BrowserRouter>
+        <BackgroundMusic />
         <Layout>
           <Routes>
             <Route path="/" element={<Home />} />
