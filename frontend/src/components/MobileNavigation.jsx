@@ -2,11 +2,13 @@ import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Home, User, GraduationCap, Briefcase, Award, Mail, TrendingUp } from 'lucide-react';
+import useClickSound from '../hooks/useClickSound';
 
 const MobileNavigation = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { t } = useLanguage();
+  const playClickSound = useClickSound();
 
   const navItems = [
     { path: '/', label: 'Home', icon: Home },
