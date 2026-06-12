@@ -46,6 +46,10 @@ const translations = {
     
     // Experience
     experienceTitle: 'Erfahrung & Projekte',
+    exp0Title: 'Praktikant Vertrieb & Digital Marketing',
+    exp0Company: 'Roll Out Innovation GmbH (partyboss.at)',
+    exp0Date: 'Seit 01.02.2026',
+    exp0Desc: 'Aufbau von Vertrieb und digitaler Sichtbarkeit für die Partybus-Vermietungsplattform. Marktanalyse, Content-Strategie, Social Media und Optimierung der Kundenansprache. Zusätzlich Digital Marketing für soziale Projekte (Zukunft Jugend).',
     exp1Title: 'Praktikant Nachhaltigkeit & XR-Technologien',
     exp1Company: 'NXRT GmbH, Wien',
     exp1Desc: 'Analyse der SDGs-Relevanz von AR/VR-Lösungen, Erstellung von Präsentationen für Investoren',
@@ -90,7 +94,7 @@ const translations = {
     // Contact
     contactTitle: 'Kontakt',
     contactIntro: 'Ich freue mich auf Ihre Nachricht!',
-    contactInternship: 'Pflichtpraktikum ab Februar 2026 (6. Semester)',
+    contactInternship: 'Verfügbar ab Juli 2026 für feste Positionen',
     contactFlexible: 'Flexibel einsetzbar in Linz, Steyr, Wien oder remote',
     
     // Footer
@@ -155,6 +159,10 @@ const translations = {
     
     // Experience
     experienceTitle: 'Experience & Projects',
+    exp0Title: 'Sales & Digital Marketing Intern',
+    exp0Company: 'Roll Out Innovation GmbH (partyboss.at)',
+    exp0Date: 'Since 01.02.2026',
+    exp0Desc: 'Building sales and digital visibility for the party bus rental platform. Market analysis, content strategy, social media and customer outreach optimization. Additionally digital marketing for social projects (Zukunft Jugend).',
     exp1Title: 'Sustainability & XR Intern',
     exp1Company: 'NXRT GmbH, Vienna',
     exp1Desc: 'SDG relevance analysis of AR/VR solutions, investor presentations',
@@ -199,7 +207,7 @@ const translations = {
     // Contact
     contactTitle: 'Contact',
     contactIntro: 'Looking forward to your message!',
-    contactInternship: 'Mandatory internship from february 2026 (6th semester)',
+    contactInternship: 'Available from July 2026 for permanent positions',
     contactFlexible: 'Flexible deployment in Linz, Steyr, Vienna or remote',
     
     // Footer
