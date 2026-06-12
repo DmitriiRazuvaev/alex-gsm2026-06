@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
-import { ArrowLeft, Briefcase, Building, Award } from 'lucide-react';
+import { ArrowLeft, Briefcase, Building, Award, Rocket } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import NavigationButtons from '../components/NavigationButtons';
 
@@ -10,6 +10,14 @@ const Experience = () => {
   const { t } = useLanguage();
 
   const experiences = [
+    {
+      title: t('exp0Title'),
+      company: t('exp0Company'),
+      description: t('exp0Desc'),
+      date: t('exp0Date'),
+      icon: Rocket,
+      isNew: true,
+    },
     {
       title: t('exp1Title'),
       company: t('exp1Company'),
@@ -86,13 +94,22 @@ const Experience = () => {
             return (
               <div
                 key={index}
-                className="bg-slate-900/50 backdrop-blur-md border border-pink-500/20 rounded-2xl p-6 hover:border-pink-500/40 transition-all duration-500 hover:shadow-xl hover:shadow-pink-500/10 transform hover:-translate-y-2 group"
+                className={`relative bg-slate-900/50 backdrop-blur-md border rounded-2xl p-6 hover:border-pink-500/40 transition-all duration-500 hover:shadow-xl hover:shadow-pink-500/10 transform hover:-translate-y-2 group ${
+                  exp.isNew ? 'border-pink-500/50 ring-2 ring-pink-500/20' : 'border-pink-500/20'
+                }`}
                 style={{
                   animation: 'fadeInUp 0.6s ease-out forwards',
                   animationDelay: `${index * 100}ms`,
                   opacity: 0,
                 }}
               >
+                {/* New Badge */}
+                {exp.isNew && (
+                  <div className="absolute -top-2 -right-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
+                    AKTUELL
+                  </div>
+                )}
+                
                 {/* Icon */}
                 <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500/20 to-purple-500/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Icon className="w-6 h-6 text-pink-400" />
@@ -137,6 +154,23 @@ const Experience = () => {
             {t('language') === 'de' ? 'Projektgalerie' : 'Project Gallery'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Partyboss - New */}
+            <div className="bg-slate-900/50 backdrop-blur-md border border-pink-500/40 rounded-2xl overflow-hidden hover:border-pink-500/60 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/20 ring-2 ring-pink-500/20">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_fd904bed-5879-4fab-b033-6534ac767df4/artifacts/3cugpbt3_schoolbus.jpeg"
+                alt="Partyboss.at" 
+                className="w-full h-48 object-cover"
+                style={{ objectPosition: 'center 60%' }}
+              />
+              <div className="p-4">
+                <div className="flex items-center justify-between">
+                  <p className="text-white font-semibold">partyboss.at</p>
+                  <span className="bg-gradient-to-r from-pink-500 to-purple-500 text-white text-xs font-bold px-2 py-1 rounded-full">AKTUELL</span>
+                </div>
+                <p className="text-gray-400 text-sm">{t('language') === 'de' ? 'Vertrieb & Digital Marketing' : 'Sales & Digital Marketing'}</p>
+              </div>
+            </div>
+
             <div className="bg-slate-900/50 backdrop-blur-md border border-pink-500/20 rounded-2xl overflow-hidden hover:border-pink-500/40 transition-all duration-300 hover:shadow-xl hover:shadow-pink-500/10">
               <img 
                 src="/nxrt.jpg" 

@@ -7,7 +7,7 @@ import NavigationButtons from '../components/NavigationButtons';
 
 const Education = () => {
   const navigate = useNavigate();
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
 
   const educationItems = [
     {
@@ -15,6 +15,9 @@ const Education = () => {
       location: t('edu1Location'),
       date: t('edu1Date'),
       color: 'pink',
+      description: language === 'de'
+        ? 'Diplomarbeit „How AI can boost qualitative and quantitative research methodologies in B2B: The case of Voestalpine in the Railway Sector" — In meiner Diplomarbeit untersuche ich, wie Künstliche Intelligenz qualitative und quantitative Forschungsmethoden im B2B-Bereich verbessern kann – am konkreten Beispiel von voestalpine im Schienenverkehrssektor.'
+        : 'Thesis: "How AI can boost qualitative and quantitative research methodologies in B2B: The case of Voestalpine in the Railway Sector" — In my thesis, I examine how Artificial Intelligence can improve qualitative and quantitative research methodologies in B2B – using the concrete example of voestalpine in the railway sector.',
     },
     {
       title: t('edu2Title'),
@@ -89,6 +92,14 @@ const Education = () => {
                     <span>{item.date}</span>
                   </div>
                 </div>
+
+                {item.description && (
+                  <div className="mt-4 pt-4 border-t border-slate-700/50">
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                )}
               </div>
             </div>
           ))}
